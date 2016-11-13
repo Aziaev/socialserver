@@ -9,6 +9,7 @@ public class Main {
         Server server = new Server(9090);
 
         ResourceHandler resourceHandler = new ResourceHandler();
-        resourceHandler.setResourceBase();
+        resourceHandler.setResourceBase("C:\\Users\\artur.ziaev\\Google Диск\\personal\\projects\\JAVA\\javainnopolislessons\\SocialServer\\public_html");
+        resourceHandler.setDirectoriesListed(true);
     }
 }
