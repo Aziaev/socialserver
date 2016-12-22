@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="PostgreSQL - droid@localhost">
+  <database-model serializer="dbm" rdbms="POSTGRES" format-version="2.6">
+    <database id="1" name="droid">
+      <object-id>42068</object-id>
+      <visible>1</visible>
+    </database>
+    <database id="2" name="postgres">
+      <object-id>12373</object-id>
+    </database>
+    <database id="3" name="mydb">
+      <object-id>33539</object-id>
+    </database>
+    <schema id="4" parent="1" name="public">
+      <object-id>2200</object-id>
+      <visible>1</visible>
+      <introspection-state-number>1791</introspection-state-number>
+      <introspection-timestamp>2016-11-20.18:43:54.575</introspection-timestamp>
+    </schema>
+    <schema id="5" parent="1" name="pg_catalog">
+      <object-id>11</object-id>
+    </schema>
+    <schema id="6" parent="1" name="pg_toast">
+      <object-id>99</object-id>
+    </schema>
+    <schema id="7" parent="1" name="pg_temp_1">
+      <object-id>11816</object-id>
+    </schema>
+    <schema id="8" parent="1" name="pg_toast_temp_1">
+      <object-id>11817</object-id>
+    </schema>
+    <schema id="9" parent="1" name="information_schema">
+      <object-id>12081</object-id>
+    </schema>
+    <sequence id="10" parent="4" name="users_id_seq">
+      <object-id>42069</object-id>
+      <state-number>1771</state-number>
+    </sequence>
+    <table id="11" parent="4" name="users">
+      <object-id>42071</object-id>
+      <state-number>1791</state-number>
+    </table>
+    <column id="12" parent="11" name="id">
+      <state-number>1771</state-number>
+      <mandatory>1</mandatory>
+      <data-type>integer|0</data-type>
+      <default-expression>nextval(&apos;users_id_seq&apos;::regclass)</default-expression>
+    </column>
+    <column id="13" parent="11" name="name">
+      <state-number>1772</state-number>
+      <mandatory>1</mandatory>
+      <data-type>char(255)|0</data-type>
+    </column>
+    <column id="14" parent="11" name="phone">
+      <state-number>1774</state-number>
+      <mandatory>1</mandatory>
+      <data-type>char(15)|0</data-type>
+    </column>
+    <column id="15" parent="11" name="email">
+      <state-number>1777</state-number>
+      <mandatory>1</mandatory>
+      <data-type>char(45)|0</data-type>
+    </column>
+    <column id="16" parent="11" name="status">
+      <state-number>1776</state-number>
+      <data-type>char(255)|0</data-type>
+    </column>
+    <column id="17" parent="11" name="password">
+      <state-number>1791</state-number>
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <index id="18" parent="11" name="id">
+      <object-id>42075</object-id>
+      <columns>id</columns>
+      <desc-columns></desc-columns>
+      <unique>1</unique>
+    </index>
+    <index id="19" parent="11" name="phone">
+      <object-id>42080</object-id>
+      <columns>phone
+email</columns>
+      <desc-columns></desc-columns>
+      <unique>1</unique>
+    </index>
+    <key id="20" parent="11" name="id">
+      <object-id>42076</object-id>
+      <columns>id</columns>
+      <underlying-index>id</underlying-index>
+      <primary>1</primary>
+    </key>
+    <key id="21" parent="11" name="phone">
+      <object-id>42081</object-id>
+      <columns>phone
+email</columns>
+      <underlying-index>phone</underlying-index>
+    </key>
+  </database-model>
+</dataSource>

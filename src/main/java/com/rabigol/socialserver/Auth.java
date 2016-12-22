@@ -1,4 +1,4 @@
-package models;
+package com.rabigol.socialserver;
 
 /**
  * Created by Artur.Ziaev on 13.11.2016.
